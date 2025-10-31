@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Classic T-shirt", "price": 120, "image": "https://picsum.photos/300/200?1" },
+  { "id": 2, "name": "Casual Hoodie", "price": 435, "image": "https://picsum.photos/300/200?2" },
+  { "id": 3, "name": "Running Shoes", "price": 759, "image": "https://picsum.photos/300/200?3" }
+]
