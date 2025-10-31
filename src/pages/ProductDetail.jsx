@@ -66,7 +66,7 @@ export default function ProductDetail() {
               cursor: "pointer",
             }}
           >
-            🛒 Add to Cart
+          Add to Cart
           </button>
         </div>
       </div>
