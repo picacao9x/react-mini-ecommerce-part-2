@@ -53,6 +53,11 @@ export default function Products() {
           >
             <div className="card">
               <div>
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  style={{ width: "100%", height: "auto" }}
+                />
                 <h3>{p.name}</h3>
                 <p>{p.category}</p>
                 <strong className="price">${p.price}</strong>

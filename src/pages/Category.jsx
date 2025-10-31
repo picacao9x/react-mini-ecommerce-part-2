@@ -7,6 +7,7 @@ export default function Category() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");
 
+
   const filtered = useMemo(() => {
     let result = products.filter(
       (p) => p.category.toLowerCase() === categoryName.toLowerCase()
@@ -58,6 +59,11 @@ export default function Category() {
           >
             <div className="card">
               <div>
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  style={{ width: "100%", height: "auto" }}
+                />
                 <h3>{p.name}</h3>
                 <p>{p.category}</p>
                 <strong className="price">${p.price}</strong>

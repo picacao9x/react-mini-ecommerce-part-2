@@ -9,7 +9,7 @@ export default function ProductDetail() {
   if (!product) {
     return (
       <div style={{ padding: "2rem" }}>
-        <p>❌ Product not found.</p>
+        <p>Product not found.</p>
         <Link to="/products">← Back to products</Link>
       </div>
     );
@@ -37,7 +37,7 @@ export default function ProductDetail() {
           }}
         >
           <img
-            src={product.image || "https://via.placeholder.com/400x300"}
+            src={product.image}
             alt={product.name}
             style={{ width: "100%", height: "auto" }}
           />
