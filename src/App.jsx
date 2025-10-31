@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Products from "./pages/Products";
-import Category from "./pages/Category";
+import Category from "./pages/Category.jsx";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      <main style={{ marginTop: "80px" }}>
+      <main style={{ marginTop: "30px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

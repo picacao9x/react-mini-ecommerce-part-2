@@ -24,7 +24,7 @@ export default function Products() {
   }, [search, sort]);
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div className="container">
       <h2>All Products</h2>
 
       {/* Bộ lọc tìm kiếm & sắp xếp */}
@@ -44,53 +44,26 @@ export default function Products() {
       </div>
 
       {/* Danh sách sản phẩm */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-          gap: "1rem",
-        }}
-      >
+      <div className="grid">
         {filtered.map((p) => (
           <Link
             key={p.id}
             to={`/product/${p.id}`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <div
-              style={{
-                border: "1px solid #ddd",
-                padding: "1rem",
-                borderRadius: 8,
-                background: "#fff",
-                transition: "0.2s",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.boxShadow = "0 0 10px rgba(0,0,0,0.1)")
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
-            >
-              <h3>{p.name}</h3>
-              <p>{p.category}</p>
-              <strong>${p.price}</strong>
-
+            <div className="card">
+              <div>
+                <h3>{p.name}</h3>
+                <p>{p.category}</p>
+                <strong className="price">${p.price}</strong>
+              </div>
               <button
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
                   alert(`Add ${p.name} to cart`);
                 }}
-                style={{
-                  display: "block",
-                  marginTop: "0.5rem",
-                  width: "100%",
-                  background: "#007bff",
-                  color: "#fff",
-                  border: "none",
-                  padding: "0.5rem",
-                  borderRadius: 5,
-                  cursor: "pointer",
-                }}
+                className="btn"
               >
                 Add to Cart
               </button>
