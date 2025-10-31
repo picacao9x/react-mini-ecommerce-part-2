@@ -7,12 +7,13 @@ export default function Header() {
       <div className="container header-inner">
         {/* Logo */}
         <Link to="/" className="logo">
-          🛍️ MyShop
+          MyShop
         </Link>
 
         {/* Menu */}
         <nav className="nav">
           <Link to="/">Home</Link>
+          <Link to="/products/category">Product Category</Link>
           <Link to="/cart">Cart</Link>
         </nav>
       </div>

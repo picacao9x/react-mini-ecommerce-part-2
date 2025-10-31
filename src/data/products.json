@@ -1,5 +1,10 @@
 [
-  { "id": 1, "name": "Classic T-shirt", "price": 120, "image": "https://picsum.photos/300/200?1" },
-  { "id": 2, "name": "Casual Hoodie", "price": 435, "image": "https://picsum.photos/300/200?2" },
-  { "id": 3, "name": "Running Shoes", "price": 759, "image": "https://picsum.photos/300/200?3" }
+  { "id": 1, "name": "iPhone 15", "price": 1200, "category": "Phone","image": "https://picsum.photos/300/200?1" },
+  { "id": 2, "name": "Samsung S24 Ultra", "price": 1100, "category": "Phone","image": "https://picsum.photos/300/200?2" },
+  { "id": 3, "name": "MacBook Air M3", "price": 1600, "category": "Laptop","image": "https://picsum.photos/300/200?3" },
+  { "id": 4, "name": "Dell XPS 13", "price": 1500, "category": "Laptop","image": "https://picsum.photos/300/200?4" },
+  { "id": 5, "name": "iPad Pro 13", "price": 950, "category": "Tablet","image": "https://picsum.photos/300/200?5" },
+  { "id": 6, "name": "Xiaomi Pad 6", "price": 600, "category": "Tablet","image": "https://picsum.photos/300/200?6" },
+  { "id": 7, "name": "Apple Watch 9", "price": 500, "category": "Accessory","image": "https://picsum.photos/300/200?7" },
+  { "id": 8, "name": "AirPods Pro 2", "price": 250, "category": "Accessory","image": "https://picsum.photos/300/200?8" }
 ]
