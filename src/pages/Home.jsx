@@ -13,15 +13,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container">
-      <h1 style={{ marginTop: "3rem" }}>Our Products</h1>
-      <div className="grid">
-        {products.map(elements => (
-          <Link key={elements.id} to={`/product/${elements.id}`}>
-            <ProductCard {...elements} />
-          </Link>
-        ))}
-      </div>
-    </div>
+    <>
+    Đây là trang Home
+    </>
   );
 }
