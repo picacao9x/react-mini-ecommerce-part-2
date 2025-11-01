@@ -1,10 +1,13 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import products from "../data/products.json";
+import Pagination from "../components/Pagination";
 
 export default function Products() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
 
   const filtered = useMemo(() => {
     let result = products;
@@ -22,6 +25,10 @@ export default function Products() {
 
     return result;
   }, [search, sort]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / itemsPerPage));
+  const start = (currentPage - 1) * itemsPerPage;
+  const paginated = filtered.slice(start, start + itemsPerPage);
 
   return (
     <div className="container">
@@ -45,7 +52,7 @@ export default function Products() {
 
       {/* Danh sách sản phẩm */}
       <div className="grid">
-        {filtered.map((p) => (
+        {paginated.map((p) => (
           <Link
             key={p.id}
             to={`/product/${p.id}`}
@@ -76,8 +83,13 @@ export default function Products() {
           </Link>
         ))}
       </div>
-
       {filtered.length === 0 && <p>No products found.</p>}
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={(p) => setCurrentPage(p)}
+      />
     </div>
   );
 }
